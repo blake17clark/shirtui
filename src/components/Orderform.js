@@ -21,7 +21,7 @@ export default class extends Component {
     //     const { redirect, ...submit } = this.state;
     //     if (this.props.login(submit)) {
     //         alert("Successfully Ordered");
-    //         this.setState({ redirect: true });
+    //         this.setState({ redirect: true }); this update
 
 
 
