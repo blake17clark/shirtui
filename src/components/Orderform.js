@@ -46,10 +46,10 @@ class OrderForm extends Component {
       };
 
     render() {
-        const title = "Order Form"
+        const title = "Place Orders Here"
         const willDirect = this.state.redirect
         return (
-            <fieldset className="center" className="fontsize">
+            <fieldset className="center">
             <legend>{title}</legend>
             <form className="flexbox" onSubmit={this.handleSubmit}>
             <input

@@ -6,9 +6,9 @@ import '../App.css';
 class Home extends React.Component{
 render(){
   return (
-    <div className="App">
+    <div className="App" id="font">
 
-          Hello World
+          Welcome To Flowing Freeride
           </div>
 
           
