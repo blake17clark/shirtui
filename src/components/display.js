@@ -89,6 +89,9 @@ class Orders extends Component {
             <div>
                <h1>Order Information</h1>
                <div>{this.state.testing}</div>
+               <br></br>
+               <br></br>
+               <div><img src={require("./ffrvinylstickers-04.jpg")} alt="ffr" style={{ height: "430px" }}/></div>
 
             </div>
         )
