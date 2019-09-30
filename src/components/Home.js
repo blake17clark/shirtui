@@ -9,7 +9,9 @@ render(){
     <div className="App" id="font">
           <br></br>
           <h1>Welcome To Flowing Freeride</h1>
+          <div>
           <img src={require("./ffrvinylstickers-04.jpg")} alt="ffr" style={{ height: "430px" }}/>
+          </div>
           </div>
           
           

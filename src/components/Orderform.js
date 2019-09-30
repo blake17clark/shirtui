@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import '../App.css'
 import { SHIRT_API } from '../config/coms'
+
 
 class OrderForm extends Component {
     state = {
@@ -15,7 +15,8 @@ class OrderForm extends Component {
         payment: "",
         items: ""
     };
-                                      //API Express App.post gets body->Mongo JSON    State is an object
+         baseState = this.state
+    //API Express App.post gets body->Mongo JSON    State is an object
     // handleSubmit = event => {     //this will submit data need more functionality code not done
     //     event.preventDefault();     // fetch function Post-form data
     //     const { redirect, ...submit } = this.state;
@@ -36,8 +37,8 @@ class OrderForm extends Component {
           "Content-Type": "application/json"
         }
       })
-      alert(this.state.firstName)
-
+      await alert(`Thank You For Your Order. Please Review These Details Are Correct ${this.state.firstName} ${this.state.lastName}`)
+        await window.location.reload() 
     }
 
 

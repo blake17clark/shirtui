@@ -11,7 +11,7 @@ const Routes = () => {
         <>
         <Route exact path="/" component={() =>  <Home/>}/>
         <Route path="/orders" component={() => <Orders/>}/>
-        <Route path="/orderform" component={Orderform}/>
+        <Route path="/orderform" component={() => <Orderform/>}/>
         <Route
          path="/update" render={(props) => <Update {...props} isAuthed={true}/>}/>
         
