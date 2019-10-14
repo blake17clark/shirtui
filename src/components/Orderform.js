@@ -48,7 +48,7 @@ class OrderForm extends Component {
 
     render() {
         const title = "Place Orders Here"
-        const willDirect = this.state.redirect
+        // const willDirect = this.state.redirect
         return (
             <fieldset className="center">
             <legend>{title}</legend>

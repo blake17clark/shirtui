@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import {Redirect} from 'react-router-dom'
+// import {Redirect} from 'react-router-dom'
 import { SHIRT_API } from '../config/coms'
-import { thisTypeAnnotation, classBody } from "@babel/types";
+// import { thisTypeAnnotation, classBody } from "@babel/types";
 import Orderitems from './Orderitems'
 // const ObjectId = require("mongodb").ObjectId;
 
@@ -57,7 +57,7 @@ class Orders extends Component {
         .then(response => response.json())
         .then(data => 
             data.map(jsonItem => (
-                <Orderitems orderData={jsonItem} deleteIt={this.remove}/>
+                <Orderitems key={jsonItem._id} orderData={jsonItem} deleteIt={this.remove}/>
             ))
         ).then(components => this.setState({testing: components }))
         .catch(console.log);

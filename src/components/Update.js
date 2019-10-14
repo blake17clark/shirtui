@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { SHIRT_API } from '../config/coms'
-import Orderitems from './Orderitems'
-import { Link } from "react-router-dom"
+// import Orderitems from './Orderitems'
+// import { Link } from "react-router-dom"
 
 
 class Update extends Component {
@@ -24,7 +24,7 @@ class Update extends Component {
         };
 
     handleChange = ({ target }) => {
-        this.setState( { [target.name]: target.value } );
+        this.setState( { [target.name]: target.defaultValue } );
       };
 
       handleSubmit = async event => { 
@@ -53,80 +53,80 @@ class Update extends Component {
                 placeholder="First Name"
                 name="firstName"
                 onChange={this.handleChange}
-                value={this.state.firstName}
-                required
+                defaultValue={this.state.firstName}
+                // required
               />
             <input
                 type="text"
                 placeholder="Last Name"
                 name="lastName"
                 onChange={this.handleChange}
-                value={this.state.lastName}
-                required
+                defaultValue={this.state.lastName}
+                // required
               />
             <input
                 type="email"
                 placeholder="Email"
                 name="email"
                 onChange={this.handleChange}
-                value={this.state.email}
-                required
+                defaultValue={this.state.email}
+                // required
               />
               <input
                 type="text"
                 placeholder="Address"
                 name="mailingAddress"
                 onChange={this.handleChange}
-                value={this.state.mailingAddress}
-                required
+                defaultValue={this.state.mailingAddress}
+                // required
               />
                 <input
                 type="text"
                 placeholder="City"
                 name="city"
                 onChange={this.handleChange}
-                value={this.state.city}
-                required
+                defaultValue={this.state.city}
+                // required
               />
                 <input
                 type="text"
                 placeholder="State"
                 name="state"
                 onChange={this.handleChange}
-                value={this.state.state}
-                required
+                defaultValue={this.state.state}
+                // required
               />
                 <input
                 type="number"
                 placeholder="Zip Code"
                 name="zipCode"
                 onChange={this.handleChange}
-                value={this.state.zipCode}
-                required
+                defaultValue={this.state.zipCode}
+                // required
               />
             <input
                 type="tel"
                 placeholder="Phone"
                 name="phone"
                 onChange={this.handleChange}
-                value={this.state.phone}
-                required
+                defaultValue={this.state.phone}
+                // required
               />
             <input
                 type="text"
                 placeholder="Payment"
                 name="payment"
                 onChange={this.handleChange}
-                value={this.state.payment}
-                required
+                defaultValue={this.state.payment}
+                // required
               />
             <input
                 type="text"
                 placeholder="Items"
                 name="items"
                 onChange={this.handleChange}
-                value={this.state.items}
-                required
+                defaultValue={this.state.items}
+                // required
               />  
               <br/>            
               <button className="button" type="submit">Update</button>

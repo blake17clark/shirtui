@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import {Redirect} from 'react-router-dom'
-import { tsConstructorType } from "@babel/types";
+// import {Redirect} from 'react-router-dom'
+// import { tsConstructorType } from "@babel/types";
 import { Link } from "react-router-dom"
 
 class Orderitems extends Component {
-    constructor(props) {
-        super(props)
-    }
+    // constructor(props) {
+    //     super(props)
+    // }
 
     handleClick = () => {
         this.props.deleteIt(this.props.orderData._id)

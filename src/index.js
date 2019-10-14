@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Orderform from './components/Orderform';
+// import Orderform from './components/Orderform';
 import App from './App'
 import * as serviceWorker from './serviceWorker';
 
