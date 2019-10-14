@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { SHIRT_API } from '../config/coms'
 // import Orderitems from './Orderitems'
 // import { Link } from "react-router-dom"
+// import { withRouter } from 'react-router'
 
 
 class Update extends Component {
@@ -9,11 +10,23 @@ class Update extends Component {
         super(props);
         console.log('update props',props)
        
-    }
-        state = {
+    
+        // this.state = {
+        //     firstName: "",
+        //     lastName: "",
+        //     email: "",
+        //     phone: "", 
+        //     mailingAddress: "",
+        //     city: "",
+        //     state: "",
+        //     zipCode: "",
+        //     payment: "",
+        //     items: ""
+        // };
+        this.state = {
             firstName: this.props.location.state.info.firstName,
-            lastName: this.props.location.state.info.lasttName,
-            email: this.props.location.state.info.eamil,
+            lastName: this.props.location.state.info.lastName,
+            email: this.props.location.state.info.email,
             phone: this.props.location.state.info.phone,  
             mailingAddress: this.props.location.state.info.mailingAddress,
             city: this.props.location.state.info.city,
@@ -22,9 +35,10 @@ class Update extends Component {
             payment: this.props.location.state.info.payment,
             items: this.props.location.state.info.items
         };
-
+      }
+      
     handleChange = ({ target }) => {
-        this.setState( { [target.name]: target.defaultValue } );
+        this.setState( { [target.name]: target.value } );
       };
 
       handleSubmit = async event => { 
@@ -32,6 +46,7 @@ class Update extends Component {
         
         event.preventDefault();
         const body = this.state
+        console.log('body',body)
         await fetch(`${SHIRT_API}/${this.props.location.state.info._id}`, {
           method: "PUT",
           body: JSON.stringify(body),
@@ -40,9 +55,14 @@ class Update extends Component {
           }
         })
         alert(this.state.firstName)
+        // const { router } = this.props
+        await window.location.replace('/orders')
   
       }
-    
+    componentDidMount(){
+      console.log('this.state', this.state)
+      console.log('this.props',this.props.location.state.info)
+    }
     render() {
          return(
              <div>
@@ -53,7 +73,7 @@ class Update extends Component {
                 placeholder="First Name"
                 name="firstName"
                 onChange={this.handleChange}
-                defaultValue={this.state.firstName}
+                value={this.state.firstName}
                 // required
               />
             <input
@@ -61,7 +81,7 @@ class Update extends Component {
                 placeholder="Last Name"
                 name="lastName"
                 onChange={this.handleChange}
-                defaultValue={this.state.lastName}
+                value={this.state.lastName}
                 // required
               />
             <input
@@ -69,7 +89,7 @@ class Update extends Component {
                 placeholder="Email"
                 name="email"
                 onChange={this.handleChange}
-                defaultValue={this.state.email}
+                value={this.state.email}
                 // required
               />
               <input
@@ -77,7 +97,7 @@ class Update extends Component {
                 placeholder="Address"
                 name="mailingAddress"
                 onChange={this.handleChange}
-                defaultValue={this.state.mailingAddress}
+                value={this.state.mailingAddress}
                 // required
               />
                 <input
@@ -85,7 +105,7 @@ class Update extends Component {
                 placeholder="City"
                 name="city"
                 onChange={this.handleChange}
-                defaultValue={this.state.city}
+                value={this.state.city}
                 // required
               />
                 <input
@@ -93,7 +113,7 @@ class Update extends Component {
                 placeholder="State"
                 name="state"
                 onChange={this.handleChange}
-                defaultValue={this.state.state}
+                value={this.state.state}
                 // required
               />
                 <input
@@ -101,7 +121,7 @@ class Update extends Component {
                 placeholder="Zip Code"
                 name="zipCode"
                 onChange={this.handleChange}
-                defaultValue={this.state.zipCode}
+                value={this.state.zipCode}
                 // required
               />
             <input
@@ -109,7 +129,7 @@ class Update extends Component {
                 placeholder="Phone"
                 name="phone"
                 onChange={this.handleChange}
-                defaultValue={this.state.phone}
+                value={this.state.phone}
                 // required
               />
             <input
@@ -117,7 +137,7 @@ class Update extends Component {
                 placeholder="Payment"
                 name="payment"
                 onChange={this.handleChange}
-                defaultValue={this.state.payment}
+                value={this.state.payment}
                 // required
               />
             <input
@@ -125,7 +145,7 @@ class Update extends Component {
                 placeholder="Items"
                 name="items"
                 onChange={this.handleChange}
-                defaultValue={this.state.items}
+                value={this.state.items}
                 // required
               />  
               <br/>            
@@ -137,5 +157,5 @@ class Update extends Component {
     }
 }
 
-
+// export default withRouter(Update);
 export default Update;

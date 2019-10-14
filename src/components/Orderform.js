@@ -15,7 +15,7 @@ class OrderForm extends Component {
         payment: "",
         items: ""
     };
-         baseState = this.state
+        //  baseState = this.state
     //API Express App.post gets body->Mongo JSON    State is an object
     // handleSubmit = event => {     //this will submit data need more functionality code not done
     //     event.preventDefault();     // fetch function Post-form data
