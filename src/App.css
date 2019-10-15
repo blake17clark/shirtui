@@ -48,11 +48,14 @@ body{
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(127, 204, 255, 0.591)
+  background-image: linear-gradient(to right, rgb(250, 8, 8), silver);
+
 }
 input{
   font-size: 30px;
   height: 30px;
+  border-radius: 10px;
+  
 }
 
 .App {
@@ -73,15 +76,4 @@ input{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
