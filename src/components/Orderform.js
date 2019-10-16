@@ -127,6 +127,7 @@ class OrderForm extends Component {
               <button className="button" type="submit">Submit</button>
             </form>
             <img src={require("./ffrvinylstickers-04.jpg")} alt="ffr" style={{ height: "430px" }}/>
+   
 
             </fieldset>
             

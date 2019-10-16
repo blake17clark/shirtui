@@ -27,6 +27,7 @@ button{
 .flexbox {
   display: flex;
   flex-direction: column;
+  
 }
 
 #homePage{
@@ -52,9 +53,10 @@ body{
 
 }
 input{
-  font-size: 30px;
+  font-size: 20px;
   height: 30px;
   border-radius: 10px;
+  padding: 16px;
   
 }
 
