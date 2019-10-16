@@ -86,12 +86,13 @@ class Orders extends Component {
         //     this.state.test
         // }
         return(
-            <div>
+            <div className="center">
                <h1>Order Information</h1>
+               <div ><img src={require("./ffrvinylstickers-04.jpg")} alt="ffr logo" style={{ height: "230px" }}/></div>
+
                <div>{this.state.testing}</div>
                <br></br>
                <br></br>
-               <div><img src={require("./ffrvinylstickers-04.jpg")} alt="ffr" style={{ height: "430px" }}/></div>
 
             </div>
         )
