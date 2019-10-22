@@ -5,12 +5,12 @@ import Orders from "../components/display";
 import Update from "../components/Update"
 import Home from "../components/Home"
 
-
+// utilize route component to assign a path to one of my components.  ... stands for spread operator, spreads properities into individual components
 
 const Routes = () => {
     return(
         <Switch>
-        <Route exact path="/" component={() =>  <Home/>}/>
+        <Route exact path="/" component={() =>  <Home/>}/>     
         <Route path="/orders" component={() => <Orders/>}/>
         <Route path="/orderform" component={() => <Orderform/>}/>
         <Route

@@ -10,7 +10,7 @@ render(){
           <br></br>
           <h1>Get Your Flowing Freeride Shirt Today</h1>
           <div>
-          <img src={require("./ffrvinylstickers-04.jpg")} alt="ffr logo" style={{ height: "430px" }}/>
+          <img src={require("./ffrvinylstickers-04.jpg")} alt="ffr logo" style={{ height: "270px" }}/>
           <br/>
             <img src={require("./Black Shirt FFR Logo.png")} alt="Blackffrshirt" style={{ height: "430px" }}/>
             <img src={require("./WhiteShirtSmFFRLogo.png")} alt="Whiteffrshirt" style={{ height: "530px" }}/>

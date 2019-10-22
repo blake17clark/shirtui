@@ -20,7 +20,7 @@ class Orders extends Component {
         payment: "",
         items: "",
 
-        testing: []
+        testing: []     // to see that the components were mapped properly
 
     }
     componentDidMount () {
@@ -57,11 +57,11 @@ class Orders extends Component {
         .then(response => response.json())
         .then(data => 
             data.map(jsonItem => (
-                <Orderitems key={jsonItem._id} orderData={jsonItem} deleteIt={this.remove}/>
+                <Orderitems key={jsonItem._id} orderData={jsonItem} deleteIt={this.remove}/>    //asigning properties
             ))
         ).then(components => this.setState({testing: components }))
-        .catch(console.log);
-        console.log("trying to reload");
+        .catch(err => console.log("err", err));
+       
     }
 
     remove = (incomingID) => {

@@ -9,13 +9,12 @@ class Orderitems extends Component {
     // }
 
     handleClick = () => {
-        this.props.deleteIt(this.props.orderData._id)
-        //this.props.reloadIt();
+        this.props.deleteIt(this.props.orderData._id)   
+        // calling property that I've called deleteIt from my display page. deleteIt property is assigned the value of this.remove from the display component. ex- deleteIt={this.remove}
+        
     }
 
-    reload = () => {
-        console.log("this is this");
-    }
+    
 
     render() {
 
@@ -38,7 +37,7 @@ class Orderitems extends Component {
                 }}} > Update
                 </Link>
             </div>
-
+                // link tag/component is how we link to update component
         )   
     }
 }
