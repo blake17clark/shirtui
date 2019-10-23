@@ -18,10 +18,11 @@ button{
 .button{
   width: 200px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 20px;
   height: 50px;
-
+  background: rgb(184, 168, 28);
+  border:3px solid #2BC1F2
 }
 
 .flexbox {
