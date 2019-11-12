@@ -38,7 +38,7 @@ class OrderForm extends Component {
         }
       })
       await alert(`Thank You For Your Order. Please Review These Details Are Correct ${this.state.firstName} ${this.state.lastName}`)
-        await window.location.reload() 
+        await window.location.reload()   // reloads site and networklog for post/anything disappears, or could run function that clears our state- this.setState 
     }
 
 

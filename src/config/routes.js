@@ -7,9 +7,9 @@ import Home from "../components/Home"
 
 // utilize route component to assign a path to one of my components.  ... stands for spread operator, spreads properities into individual components
 
-const Routes = () => {
+const Routes = () => {              // Routes const is assinging a switch component and contains route components
     return(
-        <Switch>
+        <Switch>                
         <Route exact path="/" component={() =>  <Home/>}/>     
         <Route path="/orders" component={() => <Orders/>}/>
         <Route path="/orderform" component={() => <Orderform/>}/>

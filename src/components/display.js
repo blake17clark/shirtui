@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "react";       // { variable is being deconstructed } is why we use {} from is like = so from = react
 // import {Redirect} from 'react-router-dom'
 import { SHIRT_API } from '../config/coms'
 // import { thisTypeAnnotation, classBody } from "@babel/types";
@@ -8,7 +8,7 @@ import Orderitems from './Orderitems'
 
 class Orders extends Component {
 
-    state={
+    state = {
         firstName: "",
         lastName: "",
         email: "",

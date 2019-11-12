@@ -6,7 +6,7 @@ import { SHIRT_API } from '../config/coms'
 
 
 class Update extends Component {
-    constructor(props) {
+    constructor(props) {           //  constructor aids in constructing things
         super(props);
         console.log('update props',props)
        
@@ -37,42 +37,42 @@ class Update extends Component {
         };
       }
       
-    handleChange = ({ target }) => {
+    handleChange = ({ target }) => {            // target referencing inputs for the 'name' value and target.value captures event and value n updates to state
         this.setState( { [target.name]: target.value } );
       };
 
-      handleSubmit = async event => { 
+      handleSubmit = async event => {            // takes the updated value and sends to database
         console.log(JSON.stringify(this.state));
         
         event.preventDefault();
         const body = this.state
         console.log('body',body)
-        await fetch(`${SHIRT_API}/${this.props.location.state.info._id}`, {
+        await fetch(`${SHIRT_API}/${this.props.location.state.info._id}`, {    // 1st parameter is constructing my endpoint for fetch request. 2nd param specifies http verb contains content I want to pass, specifies data type
           method: "PUT",
           body: JSON.stringify(body),
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json"     // header tells server how to interpet it
           }
         })
-        alert(this.state.firstName)
+        await alert(this.state.firstName)
         // const { router } = this.props
-        await window.location.replace('/orders')
+        await window.location.replace('/orders')    // accessing browser window and replacing path to '/orders'
   
       }
-    componentDidMount(){
+    componentDidMount(){                      // called as soon as component is loaded
       console.log('this.state', this.state)
       console.log('this.props',this.props.location.state.info)
     }
-    render() {
-         return(
+    render() {                  
+         return(            // what is being seen on the screen
              <div>
                  <h1>Update</h1>
                 <form className="flexbox" onSubmit={this.handleSubmit}>
             <input
-                type="text"
+                type="text"   
                 placeholder="First Name"
                 name="firstName"
-                onChange={this.handleChange}
+                onChange={this.handleChange}     // allows to type in more values
                 value={this.state.firstName}
                 // required
               />
