@@ -15,14 +15,10 @@ class OrderForm extends Component {
         payment: "",
         items: ""
     };
-        //  baseState = this.state
-    //API Express App.post gets body->Mongo JSON    State is an object
-    // handleSubmit = event => {     //this will submit data need more functionality code not done
-    //     event.preventDefault();     // fetch function Post-form data
-    //     const { redirect, ...submit } = this.state;
-    //     if (this.props.login(submit)) {
-    //         alert("Successfully Ordered");
-    //         this.setState({ redirect: true }); this update
+        
+    //   State is an object that holds key values pairs example key-lastName & value-Clark 
+   // objects are represented by {}
+  
 
 
     handleSubmit = async event => { 
@@ -38,12 +34,12 @@ class OrderForm extends Component {
         }
       })
       await alert(`Thank You For Your Order. Please Review These Details Are Correct ${this.state.firstName} ${this.state.lastName}`)
-        await window.location.reload()   // reloads site and networklog for post/anything disappears, or could run function that clears our state- this.setState 
+        await window.location.reload()   // accessing window object and calling it to reloads site.   Side effects- networklog for post/anything disappears, or could run function that clears our state- this.setState 
     }
 
 
     handleChange = ({ target }) => {
-        this.setState( { [target.name]: target.value } );
+        this.setState( { [target.name]: target.value } );     // takes in targe paramater then calling setState to update the specific value assiocated with value in the input used
       };
 
     render() {
