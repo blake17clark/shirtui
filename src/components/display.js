@@ -70,11 +70,14 @@ class Orders extends Component {
         const body = {};
         fetch(`${SHIRT_API}/${incomingID}`, {
             method: "DELETE",
-            body: JSON.stringify(body),
-            headers: {
-              "Content-Type": "application/json"
-            }
-          }).then(()=>this.reget() )
+            // body: JSON.stringify(body),
+            // headers: {
+            //   "Content-Type": "application/json"
+            // }
+          }).then((res)=>{
+            console.log(res)  
+            this.reget() 
+        })
         //console.log(this);
        // window.location.reload()                //get request try to package up in a component 
        
